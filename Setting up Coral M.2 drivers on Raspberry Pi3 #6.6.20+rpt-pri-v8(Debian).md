@@ -71,11 +71,12 @@ ls /dev/apex_0
 
 
 ## Added by Roman //23.02.25
-## installing pyenv
+## Installing pyenv
 ```bash
 curl https://pyenv.run | bash
 ```
-## installing missing libraries for 3.9.15
+
+## Installing missing libraries for 3.9.15
 ```bash
 sudo apt-get install libbz2-dev
 sudo apt-get install libncurses5-dev libncursesw5-dev
@@ -83,26 +84,27 @@ sudo apt-get install libffi-dev
 sudo apt-get install libreadline-dev
 sudo apt-get install libssl-dev
 ```
-## installing pyenv 3.9.15
+## Installing pyenv 3.9.15
 ```bash
 pyenv install 3.9.15
 ```
 
-## installing pycoral
+## Installing pycoral
 ```bash
 python3 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0
 ```
 
-## downgrade numpy
-'''bash
+## Downgrade numpy
+```bash
 python3 examples/classify_image.py \
 --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --labels test_data/inat_bird_labels.txt \
 --input test_data/parrot.jpg
-'''
+```
 
-# installation complete. To check follow the instruction on coral's official webpage - below as was of 23th Feb 25
-'''bash
+# Installation is complete 
+### To check follow the instruction on coral's official webpage - below as was of 23th Feb 25
+```bash
 mkdir coral && cd coral
 git clone https://github.com/google-coral/pycoral.git
 cd pycoral
@@ -111,4 +113,4 @@ python3 examples/classify_image.py \
 --model test_data/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --labels test_data/inat_bird_labels.txt \
 --input test_data/parrot.jpg
-'''
+```
